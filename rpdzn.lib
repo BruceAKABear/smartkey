@@ -1,0 +1,20 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# rpdzv-5v
+#
+DEF rpdzv-5v U 0 40 Y Y 1 F N
+F0 "U" 0 680 50 H V C CNN
+F1 "rpdzv-5v" 0 560 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -200 450 150 0 0 1 0 N
+X L 1 -300 350 100 R 50 50 1 1 P
+X N 2 -300 100 100 R 50 50 1 1 P
+X GND 3 250 100 100 L 50 50 1 1 P
+X +5V 4 250 350 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

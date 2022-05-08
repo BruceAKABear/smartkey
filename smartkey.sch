@@ -1,0 +1,871 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "smartkey"
+Date "2020-02-23"
+Rev "v1.0.0"
+Comp "BLab"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L smartkey-rescue:GND-power #PWR016
+U 1 1 5E551D58
+P 1650 2250
+F 0 "#PWR016" H 1650 2000 50  0001 C CNN
+F 1 "GND" H 1655 2077 50  0000 C CNN
+F 2 "" H 1650 2250 50  0001 C CNN
+F 3 "" H 1650 2250 50  0001 C CNN
+	1    1650 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L smartkey-rescue:GND-power #PWR020
+U 1 1 5E581B60
+P 1330 6140
+F 0 "#PWR020" H 1330 5890 50  0001 C CNN
+F 1 "GND" H 1335 5967 50  0000 C CNN
+F 2 "" H 1330 6140 50  0001 C CNN
+F 3 "" H 1330 6140 50  0001 C CNN
+	1    1330 6140
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1330 6140 1330 6300
+Wire Wire Line
+	1330 6300 1630 6300
+$Comp
+L smartkey-rescue:+5V-+5v #PWR021
+U 1 1 5E583DCA
+P 1530 6140
+F 0 "#PWR021" H 1540 6140 20  0001 C CNN
+F 1 "+5V" H 1530 6236 40  0000 C CNN
+F 2 "" H 1530 6140 60  0001 C CNN
+F 3 "" H 1530 6140 60  0001 C CNN
+	1    1530 6140
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1530 6140 1530 6200
+Wire Wire Line
+	1530 6200 1630 6200
+Wire Wire Line
+	5410 4110 5490 4110
+Wire Wire Line
+	5790 4110 6010 4110
+$Comp
+L smartkey-rescue:rpdzv-5v-rpdzn U2
+U 1 1 5E594A9A
+P 1610 1460
+F 0 "U2" H 1585 2075 50  0000 C CNN
+F 1 "rpdzv-5v" H 1585 1984 50  0000 C CNN
+F 2 "rpdzn:rpdzn-5v" H 1610 1460 50  0001 C CNN
+F 3 "" H 1610 1460 50  0001 C CNN
+	1    1610 1460
+	1    0    0    -1  
+$EndComp
+$Comp
+L smartkey-rescue:GND-power #PWR09
+U 1 1 5E5A74BE
+P 2140 1360
+F 0 "#PWR09" H 2140 1110 50  0001 C CNN
+F 1 "GND" H 2145 1187 50  0000 C CNN
+F 2 "" H 2140 1360 50  0001 C CNN
+F 3 "" H 2140 1360 50  0001 C CNN
+	1    2140 1360
+	1    0    0    -1  
+$EndComp
+Text Notes 1950 670  0    50   ~ 10
+1.power
+Text Notes 6120 690  0    50   ~ 10
+2.esp8266
+Connection ~ 6010 4670
+Wire Wire Line
+	6010 4110 6010 4670
+Connection ~ 5410 4290
+Wire Wire Line
+	5410 4290 5410 4110
+Wire Wire Line
+	6260 4670 6010 4670
+$Comp
+L smartkey-rescue:R-Device R7
+U 1 1 5E54836D
+P 4510 4490
+F 0 "R7" V 4303 4490 50  0000 C CNN
+F 1 "1k" V 4394 4490 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4440 4490 50  0001 C CNN
+F 3 "~" H 4510 4490 50  0001 C CNN
+	1    4510 4490
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:GND-power #PWR024
+U 1 1 5E547DA0
+P 4960 4690
+F 0 "#PWR024" H 4960 4440 50  0001 C CNN
+F 1 "GND" H 4965 4517 50  0000 C CNN
+F 2 "" H 4960 4690 50  0001 C CNN
+F 3 "" H 4960 4690 50  0001 C CNN
+	1    4960 4690
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5410 4290 5410 4670
+Wire Wire Line
+	4960 4290 5410 4290
+Text Label 5140 5070 0    50   ~ 0
+220V_L
+Wire Wire Line
+	5410 5070 5040 5070
+$Comp
+L smartkey-rescue:+5V-+5v #PWR023
+U 1 1 5E539860
+P 6260 4670
+F 0 "#PWR023" H 6270 4670 20  0001 C CNN
+F 1 "+5V" H 6260 4766 40  0000 C CNN
+F 2 "" H 6260 4670 60  0001 C CNN
+F 3 "" H 6260 4670 60  0001 C CNN
+	1    6260 4670
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:G5LE-1-Relay K1
+U 1 1 5E529EEB
+P 5710 4870
+F 0 "K1" V 5143 4870 50  0000 C CNN
+F 1 "G5LE-1" V 5234 4870 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 6160 4820 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 5710 4870 50  0001 C CNN
+	1    5710 4870
+	0    1    1    0   
+$EndComp
+NoConn ~ 6010 4970
+$Comp
+L smartkey-rescue:POWER_FLAG-power_flag #PWR06
+U 1 1 5E72304C
+P 2130 1110
+F 0 "#PWR06" H 2130 1110 50  0001 C CNN
+F 1 "POWER_FLAG" V 2125 1238 30  0000 L CNN
+F 2 "" H 2130 1110 50  0001 C CNN
+F 3 "" H 2130 1110 50  0001 C CNN
+	1    2130 1110
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:POWER_FLAG-power_flag #PWR010
+U 1 1 5E72556D
+P 2140 1360
+F 0 "#PWR010" H 2140 1360 50  0001 C CNN
+F 1 "POWER_FLAG" V 2135 1488 30  0000 L CNN
+F 2 "" H 2140 1360 50  0001 C CNN
+F 3 "" H 2140 1360 50  0001 C CNN
+	1    2140 1360
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:D-Device D1
+U 1 1 5E55ED3E
+P 5640 4110
+F 0 "D1" H 5640 3894 50  0000 C CNN
+F 1 "1N4148" H 5640 3985 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 5640 4110 50  0001 C CNN
+F 3 "~" H 5640 4110 50  0001 C CNN
+	1    5640 4110
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3580 6830 3470 6830
+$Comp
+L power:GND #PWR027
+U 1 1 600E89AE
+P 3440 6930
+F 0 "#PWR027" H 3440 6680 50  0001 C CNN
+F 1 "GND" V 3445 6802 50  0000 R CNN
+F 2 "" H 3440 6930 50  0001 C CNN
+F 3 "" H 3440 6930 50  0001 C CNN
+	1    3440 6930
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3440 6930 3580 6930
+Wire Wire Line
+	3580 7030 3400 7030
+Text Label 3440 7130 0    50   ~ 0
+IO0
+Wire Wire Line
+	3580 7130 3400 7130
+Wire Wire Line
+	3580 7230 3400 7230
+Wire Wire Line
+	3580 7330 3400 7330
+$Comp
+L my:SS8050-G Q1
+U 1 1 60103B6F
+P 4860 4490
+F 0 "Q1" H 5050 4536 50  0000 L CNN
+F 1 "SS8050-G" H 5050 4445 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5060 4415 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 4860 4490 50  0001 L CNN
+	1    4860 4490
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR014
+U 1 1 60340734
+P 2340 1950
+F 0 "#PWR014" H 2340 1800 50  0001 C CNN
+F 1 "+3.3V" V 2355 2078 50  0000 L CNN
+F 2 "" H 2340 1950 50  0001 C CNN
+F 3 "" H 2340 1950 50  0001 C CNN
+	1    2340 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 60395FA9
+P 2130 1110
+F 0 "#PWR05" H 2130 960 50  0001 C CNN
+F 1 "+5V" H 2145 1283 50  0000 C CNN
+F 2 "" H 2130 1110 50  0001 C CNN
+F 3 "" H 2130 1110 50  0001 C CNN
+	1    2130 1110
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9870 1180 9870 1230
+$Comp
+L power:+3.3V #PWR07
+U 1 1 60100E3F
+P 9870 1180
+F 0 "#PWR07" H 9870 1030 50  0001 C CNN
+F 1 "+3.3V" H 9885 1353 50  0000 C CNN
+F 2 "" H 9870 1180 50  0001 C CNN
+F 3 "" H 9870 1180 50  0001 C CNN
+	1    9870 1180
+	1    0    0    -1  
+$EndComp
+Text Notes 9690 670  0    50   ~ 10
+3.key
+$Comp
+L smartkey-rescue:SW_Push-Switch SW1
+U 1 1 5E56194D
+P 9670 1630
+F 0 "SW1" H 9670 1820 50  0000 C CNN
+F 1 "SW_Push" H 9660 1570 50  0001 C CNN
+F 2 "my:bt-342" H 9670 1830 50  0001 C CNN
+F 3 "~" H 9670 1830 50  0001 C CNN
+	1    9670 1630
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9870 1630 10270 1630
+Connection ~ 9870 1630
+Wire Wire Line
+	9470 1830 9470 1630
+$Comp
+L smartkey-rescue:GND-power #PWR012
+U 1 1 5E557909
+P 9470 1830
+F 0 "#PWR012" H 9470 1580 50  0001 C CNN
+F 1 "GND" H 9475 1657 50  0000 C CNN
+F 2 "" H 9470 1830 50  0001 C CNN
+F 3 "" H 9470 1830 50  0001 C CNN
+	1    9470 1830
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9870 1530 9870 1630
+$Comp
+L smartkey-rescue:R-Device R4
+U 1 1 5E554803
+P 9870 1380
+F 0 "R4" H 9940 1426 50  0000 L CNN
+F 1 "10k" H 9940 1335 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9800 1380 50  0001 C CNN
+F 3 "~" H 9870 1380 50  0001 C CNN
+	1    9870 1380
+	1    0    0    -1  
+$EndComp
+$Comp
+L smartkey-rescue:CONN-4-conn-4 J6
+U 1 1 60ADB2A4
+P 2100 7070
+F 0 "J6" H 2192 6797 50  0000 C CNN
+F 1 "CONN-4-conn-4" H 2192 6796 50  0001 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 2200 6970 60  0001 C CNN
+F 3 "" H 2200 6970 60  0001 C CNN
+	1    2100 7070
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:+5V-+5v #PWR0101
+U 1 1 60D0E0DE
+P 3470 6770
+F 0 "#PWR0101" H 3480 6770 20  0001 C CNN
+F 1 "+5V" H 3470 6866 40  0000 C CNN
+F 2 "" H 3470 6770 60  0001 C CNN
+F 3 "" H 3470 6770 60  0001 C CNN
+	1    3470 6770
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3470 6770 3470 6830
+$Comp
+L Connector:Conn_01x06_Female J4
+U 1 1 600CA256
+P 3780 7030
+F 0 "J4" H 3808 7006 50  0000 L CNN
+F 1 "Conn_01x06_Female" H 3808 6915 50  0001 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x06_P2.00mm_Vertical" H 3780 7030 50  0001 C CNN
+F 3 "~" H 3780 7030 50  0001 C CNN
+	1    3780 7030
+	1    0    0    -1  
+$EndComp
+$Comp
+L smartkey-rescue:R-Device R1
+U 1 1 5E527F11
+P 4290 1150
+F 0 "R1" V 4210 1150 50  0000 C CNN
+F 1 "10k" V 4290 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4220 1150 50  0001 C CNN
+F 3 "~" H 4290 1150 50  0001 C CNN
+	1    4290 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 600CAB25
+P 3910 1150
+F 0 "C1" H 4025 1196 50  0000 L CNN
+F 1 "1uf" H 4025 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3948 1000 50  0001 C CNN
+F 3 "~" H 3910 1150 50  0001 C CNN
+	1    3910 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 600CB923
+P 3720 1150
+F 0 "#PWR03" H 3720 900 50  0001 C CNN
+F 1 "GND" H 3725 977 50  0000 C CNN
+F 2 "" H 3720 1150 50  0001 C CNN
+F 3 "" H 3720 1150 50  0001 C CNN
+	1    3720 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3760 1150 3720 1150
+$Comp
+L Device:R R3
+U 1 1 600CF61A
+P 3480 1930
+F 0 "R3" H 3550 1976 50  0000 L CNN
+F 1 "10k" H 3550 1885 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3410 1930 50  0001 C CNN
+F 3 "~" H 3480 1930 50  0001 C CNN
+	1    3480 1930
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR08
+U 1 1 600D00FA
+P 3480 2140
+F 0 "#PWR08" H 3480 1990 50  0001 C CNN
+F 1 "+3.3V" H 3495 2313 50  0000 C CNN
+F 2 "" H 3480 2140 50  0001 C CNN
+F 3 "" H 3480 2140 50  0001 C CNN
+	1    3480 2140
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3480 2140 3480 2080
+$Comp
+L power:+3.3V #PWR01
+U 1 1 600E1C23
+P 6450 1590
+F 0 "#PWR01" H 6450 1440 50  0001 C CNN
+F 1 "+3.3V" H 6465 1763 50  0000 C CNN
+F 2 "" H 6450 1590 50  0001 C CNN
+F 3 "" H 6450 1590 50  0001 C CNN
+	1    6450 1590
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1590 6450 1650
+$Comp
+L power:+3.3V #PWR04
+U 1 1 600FED3B
+P 4440 1150
+F 0 "#PWR04" H 4440 1000 50  0001 C CNN
+F 1 "+3.3V" H 4455 1323 50  0000 C CNN
+F 2 "" H 4440 1150 50  0001 C CNN
+F 3 "" H 4440 1150 50  0001 C CNN
+	1    4440 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4140 1150 4080 1150
+Connection ~ 4080 1150
+Wire Wire Line
+	4080 1150 4060 1150
+Wire Wire Line
+	4080 1150 4080 900 
+$Comp
+L Device:R R2
+U 1 1 600E0FA9
+P 6450 1800
+F 0 "R2" H 6520 1846 50  0000 L CNN
+F 1 "10k" H 6520 1755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6380 1800 50  0001 C CNN
+F 3 "~" H 6450 1800 50  0001 C CNN
+	1    6450 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L smartkey-rescue:GND-power #PWR011
+U 1 1 5E53DE69
+P 6370 2170
+F 0 "#PWR011" H 6370 1920 50  0001 C CNN
+F 1 "GND" V 6375 2042 50  0000 R CNN
+F 2 "" H 6370 2170 50  0001 C CNN
+F 3 "" H 6370 2170 50  0001 C CNN
+	1    6370 2170
+	0    -1   -1   0   
+$EndComp
+$Comp
+L smartkey-rescue:R-Device R5
+U 1 1 5E52D927
+P 6130 2170
+F 0 "R5" V 6050 2170 50  0000 C CNN
+F 1 "10k" V 6130 2170 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6060 2170 50  0001 C CNN
+F 3 "~" H 6130 2170 50  0001 C CNN
+	1    6130 2170
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6370 2170 6280 2170
+$Comp
+L ESP8266:ESP-07S U1
+U 1 1 62769542
+P 5080 1870
+F 0 "U1" H 5080 2951 50  0000 C CNN
+F 1 "ESP-07S" H 5080 2860 50  0000 C CNN
+F 2 "kicad-ESP8266-master:ESP-07S" H 5080 1870 50  0001 C CNN
+F 3 "https://www.tinyosshop.com/datasheet/ESP-07S_User_Manual.pdf" H 5080 1870 50  0001 C CNN
+	1    5080 1870
+	1    0    0    -1  
+$EndComp
+$Comp
+L smartkey-rescue:GND-power #PWR013
+U 1 1 5E5345C0
+P 5080 2770
+F 0 "#PWR013" H 5080 2520 50  0001 C CNN
+F 1 "GND" H 5085 2597 50  0000 C CNN
+F 2 "" H 5080 2770 50  0001 C CNN
+F 3 "" H 5080 2770 50  0001 C CNN
+	1    5080 2770
+	1    0    0    -1  
+$EndComp
+Text Notes 6000 3530 0    50   ~ 10
+5.relay
+Wire Wire Line
+	5980 1970 6450 1970
+Wire Wire Line
+	6450 1970 6450 1950
+Wire Wire Line
+	6450 1970 6590 1970
+Connection ~ 6450 1970
+Text GLabel 6590 1970 2    50   Input ~ 0
+IO0
+Text GLabel 5980 1570 2    50   Input ~ 0
+TXD
+Text GLabel 5980 1670 2    50   Input ~ 0
+RXD
+Wire Wire Line
+	4180 1770 3480 1770
+Wire Wire Line
+	3480 1770 3480 1780
+Wire Wire Line
+	4080 1570 4180 1570
+Wire Wire Line
+	4080 1150 4080 1570
+Text GLabel 4080 900  1    50   Input ~ 0
+EN
+Wire Wire Line
+	10060 4010 10140 4010
+Wire Wire Line
+	10440 4010 10660 4010
+Connection ~ 10660 4570
+Wire Wire Line
+	10660 4010 10660 4570
+Connection ~ 10060 4190
+Wire Wire Line
+	10060 4190 10060 4010
+Wire Wire Line
+	10910 4570 10660 4570
+$Comp
+L smartkey-rescue:R-Device R10
+U 1 1 627AA678
+P 9160 4390
+F 0 "R10" V 8953 4390 50  0000 C CNN
+F 1 "1k" V 9044 4390 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9090 4390 50  0001 C CNN
+F 3 "~" H 9160 4390 50  0001 C CNN
+	1    9160 4390
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:GND-power #PWR0102
+U 1 1 627AA67E
+P 9610 4590
+F 0 "#PWR0102" H 9610 4340 50  0001 C CNN
+F 1 "GND" H 9615 4417 50  0000 C CNN
+F 2 "" H 9610 4590 50  0001 C CNN
+F 3 "" H 9610 4590 50  0001 C CNN
+	1    9610 4590
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10060 4190 10060 4570
+Wire Wire Line
+	9610 4190 10060 4190
+Text Label 9790 4970 0    50   ~ 0
+220V_L
+Wire Wire Line
+	10060 4970 9690 4970
+$Comp
+L smartkey-rescue:+5V-+5v #PWR0103
+U 1 1 627AA689
+P 10910 4570
+F 0 "#PWR0103" H 10920 4570 20  0001 C CNN
+F 1 "+5V" H 10910 4666 40  0000 C CNN
+F 2 "" H 10910 4570 60  0001 C CNN
+F 3 "" H 10910 4570 60  0001 C CNN
+	1    10910 4570
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:G5LE-1-Relay K3
+U 1 1 627AA68F
+P 10360 4770
+F 0 "K3" V 9793 4770 50  0000 C CNN
+F 1 "G5LE-1" V 9884 4770 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 10810 4720 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 10360 4770 50  0001 C CNN
+	1    10360 4770
+	0    1    1    0   
+$EndComp
+NoConn ~ 10660 4870
+$Comp
+L smartkey-rescue:D-Device D3
+U 1 1 627AA696
+P 10290 4010
+F 0 "D3" H 10290 3794 50  0000 C CNN
+F 1 "1N4148" H 10290 3885 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 10290 4010 50  0001 C CNN
+F 3 "~" H 10290 4010 50  0001 C CNN
+	1    10290 4010
+	-1   0    0    1   
+$EndComp
+$Comp
+L my:SS8050-G Q3
+U 1 1 627AA69C
+P 9510 4390
+F 0 "Q3" H 9700 4436 50  0000 L CNN
+F 1 "SS8050-G" H 9700 4345 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9710 4315 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 9510 4390 50  0001 L CNN
+	1    9510 4390
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7830 4040 7910 4040
+Wire Wire Line
+	8210 4040 8430 4040
+Connection ~ 8430 4600
+Wire Wire Line
+	8430 4040 8430 4600
+Connection ~ 7830 4220
+Wire Wire Line
+	7830 4220 7830 4040
+Wire Wire Line
+	8680 4600 8430 4600
+$Comp
+L smartkey-rescue:R-Device R9
+U 1 1 627AF058
+P 6930 4420
+F 0 "R9" V 6723 4420 50  0000 C CNN
+F 1 "1k" V 6814 4420 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6860 4420 50  0001 C CNN
+F 3 "~" H 6930 4420 50  0001 C CNN
+	1    6930 4420
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:GND-power #PWR0104
+U 1 1 627AF05E
+P 7380 4620
+F 0 "#PWR0104" H 7380 4370 50  0001 C CNN
+F 1 "GND" H 7385 4447 50  0000 C CNN
+F 2 "" H 7380 4620 50  0001 C CNN
+F 3 "" H 7380 4620 50  0001 C CNN
+	1    7380 4620
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7830 4220 7830 4600
+Wire Wire Line
+	7380 4220 7830 4220
+Text Label 7560 5000 0    50   ~ 0
+220V_L
+Wire Wire Line
+	7830 5000 7460 5000
+$Comp
+L smartkey-rescue:+5V-+5v #PWR0105
+U 1 1 627AF069
+P 8680 4600
+F 0 "#PWR0105" H 8690 4600 20  0001 C CNN
+F 1 "+5V" H 8680 4696 40  0000 C CNN
+F 2 "" H 8680 4600 60  0001 C CNN
+F 3 "" H 8680 4600 60  0001 C CNN
+	1    8680 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L smartkey-rescue:G5LE-1-Relay K2
+U 1 1 627AF06F
+P 8130 4800
+F 0 "K2" V 7563 4800 50  0000 C CNN
+F 1 "G5LE-1" V 7654 4800 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Omron-G5LE-1" H 8580 4750 50  0001 L CNN
+F 3 "http://www.omron.com/ecb/products/pdf/en-g5le.pdf" H 8130 4800 50  0001 C CNN
+	1    8130 4800
+	0    1    1    0   
+$EndComp
+NoConn ~ 8430 4900
+$Comp
+L smartkey-rescue:D-Device D2
+U 1 1 627AF076
+P 8060 4040
+F 0 "D2" H 8060 3824 50  0000 C CNN
+F 1 "1N4148" H 8060 3915 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 8060 4040 50  0001 C CNN
+F 3 "~" H 8060 4040 50  0001 C CNN
+	1    8060 4040
+	-1   0    0    1   
+$EndComp
+$Comp
+L my:SS8050-G Q2
+U 1 1 627AF07C
+P 7280 4420
+F 0 "Q2" H 7470 4466 50  0000 L CNN
+F 1 "SS8050-G" H 7470 4375 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7480 4345 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 7280 4420 50  0001 L CNN
+	1    7280 4420
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 627BAA54
+P 1220 5170
+F 0 "J1" H 1112 4845 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 1112 4936 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1220 5170 50  0001 C CNN
+F 3 "~" H 1220 5170 50  0001 C CNN
+	1    1220 5170
+	1    0    0    1   
+$EndComp
+Text GLabel 1950 7070 1    50   Input ~ 0
+220V_N
+Text GLabel 2050 7070 1    50   Input ~ 0
+OUT1_L
+Text GLabel 2150 7070 1    50   Input ~ 0
+OUT2_L
+Text GLabel 2250 7070 1    50   Input ~ 0
+OUT3_L
+Text GLabel 10660 5070 2    50   Input ~ 0
+OUT1_L
+Text GLabel 8430 5100 2    50   Input ~ 0
+OUT2_L
+Text GLabel 6010 5170 2    50   Input ~ 0
+OUT3_L
+$Comp
+L Regulator_Linear:AMS1117-3.3 U3
+U 1 1 62813B4C
+P 1650 1950
+F 0 "U3" H 1650 2192 50  0000 C CNN
+F 1 "AMS1117-3.3" H 1650 2101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1650 2150 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1750 1700 50  0001 C CNN
+	1    1650 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1950 1120 1950
+$Comp
+L power:+5V #PWR0106
+U 1 1 6281722A
+P 900 1950
+F 0 "#PWR0106" H 900 1800 50  0001 C CNN
+F 1 "+5V" V 915 2078 50  0000 L CNN
+F 2 "" H 900 1950 50  0001 C CNN
+F 3 "" H 900 1950 50  0001 C CNN
+	1    900  1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L smartkey-rescue:C-c C2
+U 1 1 6281B3D5
+P 1120 1950
+F 0 "C2" H 1193 1896 50  0000 L CNN
+F 1 "1uf" H 1193 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 1020 2100 60  0001 C CNN
+F 3 "" H 1020 2100 60  0001 C CNN
+	1    1120 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 1120 1950
+Wire Wire Line
+	1120 1950 900  1950
+Wire Wire Line
+	1650 2250 1120 2250
+Wire Wire Line
+	1120 2250 1120 2150
+Connection ~ 1650 2250
+Wire Wire Line
+	1950 1950 2120 1950
+$Comp
+L smartkey-rescue:C-c C3
+U 1 1 6282C272
+P 2120 1950
+F 0 "C3" H 2193 1896 50  0000 L CNN
+F 1 "1uf" H 2193 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2020 2100 60  0001 C CNN
+F 3 "" H 2020 2100 60  0001 C CNN
+	1    2120 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 2120 1950
+Wire Wire Line
+	2120 1950 2340 1950
+Wire Wire Line
+	2120 2150 2120 2250
+Wire Wire Line
+	2120 2250 1650 2250
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 62778ED2
+P 5080 970
+F 0 "#PWR0107" H 5080 820 50  0001 C CNN
+F 1 "+3.3V" V 5095 1098 50  0000 L CNN
+F 2 "" H 5080 970 50  0001 C CNN
+F 3 "" H 5080 970 50  0001 C CNN
+	1    5080 970 
+	1    0    0    -1  
+$EndComp
+Text GLabel 4180 1970 0    50   Input ~ 0
+EN1
+Text GLabel 4180 2070 0    50   Input ~ 0
+EN2
+Text GLabel 4180 2170 0    50   Input ~ 0
+EN3
+Text GLabel 4360 4490 0    50   Input ~ 0
+EN1
+Text GLabel 6780 4420 0    50   Input ~ 0
+EN2
+Text GLabel 9010 4390 0    50   Input ~ 0
+EN3
+Text GLabel 1630 6500 0    50   Input ~ 0
+ADC
+Text GLabel 4180 1670 0    50   Input ~ 0
+ADC
+Text GLabel 5980 1870 2    50   Input ~ 0
+CHECK_IO
+NoConn ~ 5980 1770
+Text GLabel 1630 6400 0    50   Input ~ 0
+CHECK_IO
+$Comp
+L Connector:Conn_01x04_Female J2
+U 1 1 627A8FC1
+P 1830 6400
+F 0 "J2" H 1858 6376 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 1858 6285 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 1830 6400 50  0001 C CNN
+F 3 "~" H 1830 6400 50  0001 C CNN
+	1    1830 6400
+	1    0    0    1   
+$EndComp
+Text Notes 1990 4500 0    50   ~ 10
+4.connector
+Wire Wire Line
+	1860 1110 2130 1110
+Connection ~ 2130 1110
+Wire Wire Line
+	1860 1360 2140 1360
+Connection ~ 2140 1360
+Text GLabel 1310 1110 0    50   Input ~ 0
+220V_L
+Text GLabel 1310 1360 0    50   Input ~ 0
+220V_N
+Text GLabel 1020 5070 0    50   Input ~ 0
+220V_L
+Text GLabel 1020 5170 0    50   Input ~ 0
+220V_N
+Text GLabel 5980 2070 2    50   Input ~ 0
+BTN
+Text GLabel 10270 1630 2    50   Input ~ 0
+BTN
+$Comp
+L Device:LED D4
+U 1 1 62779904
+P 3770 2120
+F 0 "D4" V 3809 2002 50  0000 R CNN
+F 1 "LED" V 3718 2002 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 3770 2120 50  0001 C CNN
+F 3 "~" H 3770 2120 50  0001 C CNN
+	1    3770 2120
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 6277B134
+P 3770 2420
+F 0 "R6" H 3840 2466 50  0000 L CNN
+F 1 "10k" H 3840 2375 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3700 2420 50  0001 C CNN
+F 3 "~" H 3770 2420 50  0001 C CNN
+	1    3770 2420
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 6277CCD0
+P 3770 2570
+F 0 "#PWR0108" H 3770 2320 50  0001 C CNN
+F 1 "GND" H 3775 2397 50  0000 C CNN
+F 2 "" H 3770 2570 50  0001 C CNN
+F 3 "" H 3770 2570 50  0001 C CNN
+	1    3770 2570
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4180 1870 3770 1870
+Wire Wire Line
+	3770 1870 3770 1970
+Text GLabel 3400 7030 0    50   Input ~ 0
+EN
+Text GLabel 3400 7330 0    50   Input ~ 0
+TXD
+Text GLabel 3400 7230 0    50   Input ~ 0
+RXD
+Text GLabel 3400 7130 0    50   Input ~ 0
+IO0
+$EndSCHEMATC
